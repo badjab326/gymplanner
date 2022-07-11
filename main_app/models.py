@@ -33,7 +33,7 @@ class Routine(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def done_today(self):
-        return self.taking_set.filter(date=date.today()).count() >= 1
+        return self.doing_set.filter(date=date.today()).count() >= 1
 
     def __str__(self):
         return self.name
@@ -42,7 +42,7 @@ class Routine(models.Model):
         return reverse('detail', kwargs={'routine_id': self.id})
 
 class Doing(models.Model):
-    date = models.DateField('workout date')
+    date = models.DateField('Workout Date')
     time = models.CharField(
         max_length=1,
         choices=TIMES,

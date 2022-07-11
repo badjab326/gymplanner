@@ -3,14 +3,14 @@
 <h1>Exercise Details</h1>
 
 <div class="card">
-  <a href="{% url 'exercises_detail' type.id %}">
+  <a href="{% url 'exercises_detail' exercise.id %}">
     <div class="card-content">
       <span class="card-title">
         <span class="black-text"><u>{{ exercise.name }}</u></span>
         <br />
-        {{ exercise.sets }}
+        Sets: {{ exercise.sets }}
         <br />
-        {{ exercise.reps }}
+        Reps: {{ exercise.reps }}
         </span>
     </div>
     <div class="card-action">
