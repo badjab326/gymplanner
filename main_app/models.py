@@ -29,6 +29,11 @@ class Routine(models.Model):
     muscle_group = models.CharField(max_length=100)
     description = models.TextField(max_length=250)
     days_per_week = models.IntegerField()
+    exercises = models.ManyToManyField(Exercise)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def done_today(self):
+        return self.taking_set.filter(date=date.today()).count() >= 1
 
     def __str__(self):
         return self.name
