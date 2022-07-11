@@ -2,7 +2,7 @@
 
 <h1>Exercise List</h1>
 
-{% for exercise in object_list %}
+{% for exercise in exercises %}
 <div class="card">
   <a href="{% url 'exercises_detail' exercise.id %}">
     <div class="card-content">

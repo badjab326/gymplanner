@@ -9,4 +9,13 @@ urlpatterns = [
     path('routines/create/', views.RoutineCreate.as_view(), name='routines_create'),
     path('routines/<int:pk>/update/', views.RoutineUpdate.as_view(), name='routines_update'),
     path('routines/<int:pk>/delete/', views.RoutineDelete.as_view(), name='routines_delete'),
+    path('routines/<int:routine_id>/add_doing/', views.add_doing, name='add_doing'),
+    path('routines/<int:sup_id>/assoc_type/<int:type_id>/', views.assoc_type, name='assoc_type'),
+    path('routines/<int:sup_id>/assoc_type/<int:type_id>/delete/', views.assoc_type_delete, name='assoc_type_delete'),
+    path('exercises/', views.exercises_index, name='exercises_index'),
+    path('exercises/<int:pk>/', views.ExerciseDetail.as_view(), name='exercises_detail'),
+    path('exercises/create/', views.ExerciseCreate.as_view(), name='exercises_create'),
+    path('exercises/<int:pk>/update/', views.ExerciseUpdate.as_view(), name='exercises_update'),
+    path('exercises/<int:pk>/delete/', views.ExerciseDelete.as_view(), name='exercises_delete'),
+    path('accounts/signup/', views.signup, name='signup'),
 ]
