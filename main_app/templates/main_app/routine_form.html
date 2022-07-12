@@ -4,11 +4,13 @@
 {% else %}
 <h1>Add Routine</h1>
 {% endif %}
+<div class="form-block">
 <form action="" method="post">
   {% csrf_token %}
   <table>
     {{ form.as_table }}
   </table>
+</div>
   <input type="submit" value="Submit!" class="btn" />
 </form>
 {% endblock %}

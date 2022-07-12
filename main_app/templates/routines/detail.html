@@ -20,8 +20,10 @@
         <a href="{% url 'routines_delete' routine.id %}">Delete</a>
     </div>
 </div>
+<div class="show-block">
 <form action="{% url 'add_doing' routine.id %}" method="post">
     {% csrf_token %} {{ doing_form.as_p }}
+</div>
     <input type="submit" class="btn" value="Mark As Done" />
   </form>
   <br />
@@ -35,6 +37,7 @@
   </div>
   {% endif %}
 <div class="col s6">
+ <div class="show-block">
   <table class="striped">
     <thead>
       <tr>
@@ -51,6 +54,7 @@
       {% endfor %}
     </tbody>
   </table>
+  </div>
 </div>
 </div>
 <hr />
