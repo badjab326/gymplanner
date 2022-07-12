@@ -17,7 +17,7 @@ def about(request):
 
 @login_required
 def routines_index(request):
-  routines = Routine.objects.all()
+  routines = Routine.objects.filter(user=request.user)
   return render(request, 'routines/index.html', { 'routines': routines })
 
 @login_required
@@ -56,7 +56,7 @@ def assoc_exercise_delete(request, routine_id, exercise_id):
 
 class RoutineCreate(CreateView):
   model = Routine
-  fields = '__all__'
+  fields = ['name', 'muscle_group', 'description', 'days_per_week']
   success_url = '/routines/'
   def form_valid(self, form):
     form.instance.user = self.request.user

@@ -1,5 +1,5 @@
 body {
-    /* background-image: url("gymbg.jpg"); */
+    background-image: url("gymbg.jpg");
     background-size: cover;
     display: flex;
     min-height: 100vh;
