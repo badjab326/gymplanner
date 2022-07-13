@@ -1,1 +1,1 @@
-gunicorn gymplanner.wsgi
+web: gunicorn gymplanner.wsgi
