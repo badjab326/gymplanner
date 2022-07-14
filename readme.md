@@ -11,6 +11,9 @@ Gym Planner is a straightforward web based app that gives users the ability to d
 Python<br />
 Django<br />
 PostgresQL<br />
+CSS<br />
+
+
 <br />
 
 <h2>Wireframe</h2>
