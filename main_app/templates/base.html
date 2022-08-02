@@ -17,22 +17,22 @@
     <header class="navbar-fixed">
       <nav>
         <div class="nav-wrapper">
-          <ul>
+          <ul class="title">
             <li>
               <a href="/" class="left brand-logo">&nbsp;&nbsp;Gym Planner</a>
             </li>
           </ul>
-          <ul class="right">
-            <li><a href="{% url 'about' %}">About</a></li>
+          <ul class="right" id="right">
+            <li class="lin"><a class="li2" href="{% url 'about' %}">About</a></li>
             {% if user.is_authenticated %}
-            <li><a href="{% url 'index' %}">View All Routines</a></li>
-            <li><a href="{% url 'routines_create' %}">Add a Routine</a></li>
-            <li><a href="{% url 'exercises_index' %}">View All Exercises</a></li>
-            <li><a href="{% url 'exercises_create' %}">Add Exercise</a></li>
-            <li><a href="{% url 'logout' %}">Log Out</a></li>
+            <li class="lin"><a class="li2" href="{% url 'index' %}">View All Routines</a></li>
+            <li class="lin"><a class="li2" href="{% url 'routines_create' %}">Add a Routine</a></li>
+            <li class="lin"><a class="li2" href="{% url 'exercises_index' %}">View All Exercises</a></li>
+            <li class="lin"><a class="li2" href="{% url 'exercises_create' %}">Add Exercise</a></li>
+            <li class="lin"><a class="li2" href="{% url 'logout' %}">Log Out</a></li>
             {% else %}
-            <li><a href="{% url 'signup' %}">Sign Up</a></li>
-            <li><a href="{% url 'login' %}">Log In</a></li>
+            <li class="lin"><a class="li2" href="{% url 'signup' %}">Sign Up</a></li>
+            <li class="lin"><a class="li2" href="{% url 'login' %}">Log In</a></li>
             {% endif %}
           </ul>
         </div>
