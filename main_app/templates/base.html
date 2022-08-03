@@ -17,12 +17,16 @@
     <header class="navbar-fixed">
       <nav>
         <div class="nav-wrapper">
-          <ul class="title">
+          <div class="title">
+          <ul>
             <li>
-              <a href="/" class="left brand-logo">&nbsp;&nbsp;Gym Planner</a>
+              <a href="/" class="left brand-logo">Gym Planner</a>
             </li>
           </ul>
-          <ul class="right" id="right">
+        </div>
+        <div class="right-wrapper">
+          <ul class="right">
+            <div class="navbuttons">
             <li class="lin"><a class="li2" href="{% url 'about' %}">About</a></li>
             {% if user.is_authenticated %}
             <li class="lin"><a class="li2" href="{% url 'index' %}">View All Routines</a></li>
@@ -34,7 +38,9 @@
             <li class="lin"><a class="li2" href="{% url 'signup' %}">Sign Up</a></li>
             <li class="lin"><a class="li2" href="{% url 'login' %}">Log In</a></li>
             {% endif %}
+          </div>
           </ul>
+        </div>
         </div>
       </nav>
     </header>
