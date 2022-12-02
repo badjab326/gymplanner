@@ -30,6 +30,8 @@ ALLOWED_HOSTS = ['*']
 
 X_FRAME_OPTIONS = 'ALLOW-FROM *'
 
+CSRF_TRUSTED_ORIGINS = ['https://gymplanner.up.railway.app']
+
 # Application definition
 
 INSTALLED_APPS = [
