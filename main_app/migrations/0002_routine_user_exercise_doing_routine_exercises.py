@@ -26,6 +26,8 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=50)),
                 ('sets', models.IntegerField()),
                 ('reps', models.CharField(max_length=50)),
+                ('startingWeight', models.IntegerField()),
+                ('endingWeight', models.IntegerField()),
                 ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],
         ),

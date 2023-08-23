@@ -76,7 +76,7 @@ class ExerciseDetail(LoginRequiredMixin, DetailView):
 
 class ExerciseCreate(LoginRequiredMixin, CreateView):
     model = Exercise
-    fields = ['name', 'sets', 'reps']
+    fields = ['name', 'sets', 'reps', 'startingWeight', 'endingWeight']
     success_url = '/exercises/'
     def form_valid(self, form):
       form.instance.user = self.request.user
@@ -84,7 +84,7 @@ class ExerciseCreate(LoginRequiredMixin, CreateView):
 
 class ExerciseUpdate(LoginRequiredMixin, UpdateView):
     model = Exercise
-    fields = ['name', 'sets', 'reps']
+    fields = ['name', 'sets', 'reps', 'startingWeight', 'endingWeight']
 
 class ExerciseDelete(LoginRequiredMixin, DeleteView):
     model = Exercise

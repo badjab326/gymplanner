@@ -16,10 +16,12 @@ class Exercise(models.Model):
   name = models.CharField(max_length=50)
   sets = models.IntegerField()
   reps = models.CharField(max_length=50)
+  startingWeight = models.IntegerField()
+  endingWeight = models.IntegerField()
   user = models.ForeignKey(User, on_delete=models.CASCADE)
 
   def __str__(self):
-    return f'{self.name} {self.sets} {self.reps}'
+    return f'{self.name} {self.sets} {self.reps} {self.startingWeight} {self.endingWeight}'
 
   def get_absolute_url(self):
     return reverse('exercises_detail', kwargs={'pk': self.id})
